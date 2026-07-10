@@ -2,7 +2,7 @@ class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         r, l = 0, 0 
         res = []
-        while l < len(s) and r<len(t):
+        while l < len(s) and r<len(t): # two different length strings, check individual length in while loop
             if s[l] == t[r]:
                 res.append(s[l])
                 l += 1
