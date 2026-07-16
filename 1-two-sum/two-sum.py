@@ -1,28 +1,8 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        # l = 0
-        # r = len(nums)-1
-        # while l<r:
-        #     if nums[l] + nums[r] == target:
-        #         return [l,r]
-        #     elif nums[l] + nums[r] >target:
-        #         r -= 1
-        #     else:
-        #         l += 1
-        # return [l,r]
         seen = {}
         for i, num in enumerate(nums):
-            diff = target - num
-            if diff in seen:
-                return [seen[diff],i]
+            complement = target - num
+            if complement in seen:
+                return [seen[complement],i]
             seen[num] = i
-        return
-
-
-
-
-
-
-
-
-        
