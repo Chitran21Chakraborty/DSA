@@ -1,8 +1,5 @@
-from collections import Counter
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # count = Counter(nums)
-        # return max(count.values())>1
         # seen = set()
         # for num in nums:
         #     if num in seen:
