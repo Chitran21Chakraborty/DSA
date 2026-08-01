@@ -1,7 +1,13 @@
+
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        x_str = str(x)
-        if x_str == x_str[::-1]:
+        org = x
+        rev=0
+        while (x>0) :
+            rev=(rev*10)+x%10
+            x=x//10
+            
+        if (org==rev) :
             return True
-        else:
+        else :
             return False
