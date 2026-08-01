@@ -9,5 +9,4 @@ class Solution:
             
         if (org==rev) :
             return True
-        else :
-            return False
+        return False
