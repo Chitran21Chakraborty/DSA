@@ -1,11 +1,11 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        d = {"(":")", "{":"}","[":"]"}
+        d = {'(':')','{':'}','[':']'}
         stack = []
-        for char in s:
-            if char in d: #if it is an opening bracket
-                stack.append(char) # append the opening bracket
+        for c in s:
+            if c in d:
+                stack.append(c)
             else:
-                if stack == [] or d[stack.pop()] != char:
+                if stack == [] or d[stack.pop()] != c:
                     return False
         return True if stack == [] else False
