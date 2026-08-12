@@ -3,7 +3,7 @@ class Solution:
         max1 = max2 = max3 = -inf
         for i in range(len(nums)):
             if(nums[i] > max1):
-                max1, max2, max3 = nums[i], max1, max2
+                max2, max3, max1 = max1, max2,nums[i]
             elif(nums[i] > max2 and nums[i] != max1):
                 max3 = max2
                 max2 = nums[i]
