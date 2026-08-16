@@ -1,12 +1,11 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        mapp ={'(':')','{':'}','[':']'}
-        stack = []
-        for c in s:
-            if c in mapp:
-                stack.append(c)
+        mapp = {'(':')','{':'}','[':']'}
+        stk = []
+        for char in s:
+            if char in mapp:
+                stk.append(char)
             else:
-                if stack==[] or mapp[stack.pop()] != c:
+                if stk==[] or mapp[stk.pop()]!=char:
                     return False
-        return True if stack==[] else False
-        
+        return True if stk==[] else False
