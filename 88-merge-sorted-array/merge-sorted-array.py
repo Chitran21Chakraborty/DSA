@@ -3,21 +3,19 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        # Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
-        # Output: [1,2,2,3,5,6]
-        x = m-1
-        y = n-1
-        last = m+n-1
-        while x>=0 and y>=0:
-            if nums1[x] > nums2[y]:
-                nums1[last] = nums1[x]
-                x -=1
+        p = m-1
+        q = n-1
+        l = m+n-1
+        while p>=0 and q>=0:
+            if nums2[q] > nums1[p]:
+                nums1[l] = nums2[q]
+                q -=1
             else:
-                nums1[last] = nums2[y]
-                y-=1
-            last -=1
-        while y>=0:
-            nums1[last] = nums2[y]
-            y-=1
-            last-=1
-        return nums1
+                nums1[l] = nums1[p]
+                p-=1
+            l -=1
+        while q>=0:
+            nums1[l] = nums2[q]
+            q -=1
+            l-=1
+        
