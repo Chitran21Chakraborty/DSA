@@ -1,13 +1,7 @@
-# class Solution:
-#     def containsDuplicate(self, nums: List[int]) -> bool:
-#         return len(nums)!=len(set(nums))
-
-
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        seen =set()
-        for num in nums:
-            if num in seen:
-                return True
-            seen.add(num)
-        return False
+        len_num_set=len(set(nums))
+        len_nums = len(nums)
+        if len_num_set == len_nums:
+            return False
+        return True
