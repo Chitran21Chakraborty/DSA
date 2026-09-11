@@ -9,6 +9,5 @@ class Solution:
         for i,ch in enumerate(s):
             if d[ch] == 1:
                 return i
-                break
         return -1
         
