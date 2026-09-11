@@ -7,10 +7,7 @@ class Solution:
         for i in range(minLength):
             ch = strs[0][i]
             for s in strs:
-                if s[i] != ch:
+                if s[i]!=ch:
                     return "".join(res)
             res.append(ch)
         return "".join(res)
-
-
-        
