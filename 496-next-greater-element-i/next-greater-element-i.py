@@ -10,6 +10,4 @@ class Solution:
                     idx = nums1Idx[nums2[i]]
                     res[idx] = nums2[j]
                     break
-        return res
-
-
+        return res 
