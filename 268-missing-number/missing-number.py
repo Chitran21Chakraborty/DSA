@@ -1,7 +1,7 @@
 class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        n=len(nums)
-        real_sum=n*(n+1)/2
-        nums_sum=sum(nums)
-        diff=real_sum-nums_sum
-        return int(diff)
+    def missingNumber(self, nums: list[int]) -> int:
+        n = len(nums)
+        given_sum = sum(nums)
+        actual_sum = n*(n+1)//2
+        diff = actual_sum - given_sum
+        return diff
